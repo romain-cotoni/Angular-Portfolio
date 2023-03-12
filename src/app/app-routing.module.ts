@@ -2,10 +2,10 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  {
-    path: '', 
-    loadChildren: () => import('./personal/personal.module').then(m => m.PersonalModule) 
-  },
+  // {
+  //   path: '', 
+  //   loadChildren: () => import('./personal/personal.module').then(m => m.PersonalModule) 
+  // },
   { 
     path: 'personal', 
     loadChildren: () => import('./personal/personal.module').then(m => m.PersonalModule) 

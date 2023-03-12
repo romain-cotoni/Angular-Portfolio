@@ -4,7 +4,7 @@ import { ListProjectsComponent } from './list-projects/list-projects.component';
 import { SummaryProjectComponent } from './summary-project/summary-project.component';
 
 const routes: Routes = [
-  { path: ''         , component: ListProjectsComponent },
+  // { path: ''         , component: ListProjectsComponent },
   { path: 'projets'  , component: ListProjectsComponent },
   { path: 'projet:id', component: SummaryProjectComponent }
 ];
