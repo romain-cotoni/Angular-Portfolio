@@ -5,6 +5,7 @@ import { ContactComponent } from './contact/contact.component';
 import { CvComponent } from './cv/cv.component';
 
 const routes: Routes = [
+  { path: ''       , component: CvComponent },
   { path: 'cv'     , component: CvComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'about'  , component: AboutComponent }
