@@ -1,2 +1,2 @@
-Hello World Angular
-<router-outlet></router-outlet>
+<app-header *ngIf="showHeader"></app-header>
+<router-outlet (activate)="isShowHeader()"></router-outlet>
