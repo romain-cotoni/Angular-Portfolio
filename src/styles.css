@@ -7,4 +7,24 @@ html, body {
     height: 100%; 
     margin:0;
     padding:0;
-  }
+}
+
+.height-2rem {
+  height: 2rem;
+}
+
+.height-1rem {
+  height: 1rem;
+}
+
+.height-minus-4rem {
+  height: calc(100% - 4rem);
+}
+
+.height-minus-2rem {
+  height: calc(100% - 2rem);
+}
+
+.red {
+  color:red;
+}
