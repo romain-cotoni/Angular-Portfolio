@@ -18,11 +18,11 @@ html, body {
 }
 
 .height-minus-4rem {
-  height: calc(100% - 4rem);
+  min-height: calc(100% - 4rem);
 }
 
 .height-minus-2rem {
-  height: calc(100% - 2rem);
+  min-height: calc(100% - 2rem);
 }
 
 .red {
