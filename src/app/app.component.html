@@ -1,2 +1,3 @@
 <app-header *ngIf="showHeader"></app-header>
+<h3>{{ 'goodbyMessage' | translate }}</h3>
 <router-outlet (activate)="isShowHeader()"></router-outlet>

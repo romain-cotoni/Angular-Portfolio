@@ -1,0 +1,4 @@
+{
+    "welcomeMessage": "Thanks for joining, {{ firstName }}! It's great to have you!",
+    "goodbyMessage":"Good by"
+}

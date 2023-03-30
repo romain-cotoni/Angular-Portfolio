@@ -1,0 +1,4 @@
+{
+    "welcomeMessage": "Merci et bienvenue, {{ firstName }}! C'est super de vous rencontrer!",
+    "goodbyMessage":"Au revoir"
+}
