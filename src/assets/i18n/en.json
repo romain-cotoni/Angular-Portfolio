@@ -1,4 +1,14 @@
 {
     "welcomeMessage": "Thanks for joining, {{ firstName }}! It's great to have you!",
-    "goodbyMessage":"Good by"
+    "goodbyMessage":"Good by",
+    "about":"About",
+    "projects":"Projects",
+    "project":"Project",
+    "firstname":"Firstname",
+    "lastname":"Lastname",
+    "email":"Email",
+    "adress":"Adress",
+    "position":"Position",
+    "contact-me":"Contact me",
+    "submit":"Submit"
 }

@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./summary-project.component.css']
 })
 export class SummaryProjectComponent {
-
+  github="https://github.com/romain-cotoni/Angular-Portfolio"
 }

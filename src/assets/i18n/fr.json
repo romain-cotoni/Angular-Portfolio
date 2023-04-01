@@ -1,4 +1,14 @@
 {
     "welcomeMessage": "Merci et bienvenue, {{ firstName }}! C'est super de vous rencontrer!",
-    "goodbyMessage":"Au revoir"
+    "goodbyMessage":"Au revoir",
+    "about":"A Propos",
+    "projects":"Projets",
+    "project":"Projet",
+    "firstname":"Prénom",
+    "lastname":"Nom",
+    "email":"Courriel",
+    "adress":"Adresse",
+    "position":"Métier",
+    "contact-me":"Contactez moi",
+    "submit":"Envoyer"
 }

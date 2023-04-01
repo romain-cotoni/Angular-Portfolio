@@ -1,7 +1,7 @@
 <div class="flex items-center height-minus-2rem">
     <div class="flex flex-wrap justify-start items-center border">
         <div class="w-full lg:w-1/2 xl:w-1/4 2xl:w-1/6" *ngFor="let i of [0,1,2,4,5,6,7]">
-            <div class="m-3 pl-2 border-gray-200 rounded-lg bg-red-300 hover:bg-gray-200 shadow dark:bg-gray-800 dark:border-gray-700">
+            <div class="m-3 pl-2 border-gray-200 rounded-lg bg-red-300 hover:bg-gray-200 shadow dark:bg-gray-800 dark:border-gray-700" (click)="selectProject(i)">
                 <img [src]="imagePath" alt="icon"/>
                 <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">Project's name</h5>
                 <div>Some description:</div> 
@@ -10,9 +10,6 @@
                     Please take whatever precautions are necessary to prevent this terrible disaster. 
                     Your friend, Marty.
                 </p>
-                <a [href]="github" target="_blank" class="inline-flex items-center text-blue-600 hover:underline">
-                    View code on Github
-                </a>
             </div>
         </div>
     </div>

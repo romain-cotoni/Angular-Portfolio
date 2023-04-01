@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -8,6 +9,13 @@ import { Component } from '@angular/core';
 })
 export class ListProjectsComponent {
   imagePath="assets/icons/conception.png"
-  github="https://github.com/romain-cotoni/Angular-Portfolio"
+
+  constructor(private router: Router) {
+    this.router = router;
+  }
+
+  selectProject(projectId: number) {
+    this.router.navigate(['projects/project/' + projectId]);
+  }
 
 }
