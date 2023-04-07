@@ -10,5 +10,14 @@
     "adress":"Adress",
     "position":"Position",
     "contact-me":"Contact me",
-    "submit":"Submit"
+    "submit":"Submit",
+
+    "computer-skills":"Computer Skills",
+    "experiences":"Experiences",
+    "training":"Training",
+    "languages":"Languages",
+    "leisures":"Leisures",
+
+    "collapseAll":"Collapse All",
+    "expandAll":"Expand All"
 }

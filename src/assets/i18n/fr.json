@@ -10,5 +10,14 @@
     "adress":"Adresse",
     "position":"Métier",
     "contact-me":"Contactez moi",
-    "submit":"Envoyer"
+    "submit":"Envoyer",
+
+    "computer-skills":"Compétences Informatiques",
+    "experiences":"Expériences",
+    "training":"Formations",
+    "languages":"Langues",
+    "leisures":"Loisirs",
+
+    "collapseAll":"Tout Replier",
+    "expandAll":"Tout Deplier"
 }
