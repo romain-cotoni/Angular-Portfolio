@@ -1,71 +1,143 @@
-<div class="flex flex-col items-center text-center pb-3">
-    <button class="place-self-end mr-5" (click)="collapseAll()">
-        <span *ngIf="showAll">{{ 'collapseAll' | translate }}</span>
-        <span *ngIf="!showAll">{{ 'expandAll' | translate }}</span>
-    </button>
-    <h2 class="font-bold text-base md:text-xl lg:text-2xl xl:text-2xl 2xl:text-3xl 3xl:text-4xl height-2rem mb-3">{{ 'computer-skills' | translate }}</h2>
-    <div class="">
-        <p>Spring</p>
-        <p>Spring Data Jpa</p>
-        <p>Angular</p>  
-        <p>Sql</p>
-        <p>Azure</p>
-        <p>C C++</p>
-        <p>Uml</p>
+<div class="flex flex-col items-center justify-center pb-3 text-center dev" style="min-height:calc(100% - 2rem)">
+    <div class="flex w-1/2 dev">
+        <mat-slide-toggle class="ml-auto dev" (click)="collapseToggleAll()">
+            <!-- <span *ngIf="collapsed">{{ 'collapseAll' | translate }}</span>
+            <span *ngIf="!collapsed">{{ 'expandAll' | translate }}</span> -->
+        </mat-slide-toggle>
     </div>
-    <h2 class="font-bold text-base md:text-xl lg:text-2xl xl:text-2xl 2xl:text-3xl 3xl:text-4xl height-2rem mb-3">{{ 'experiences' | translate }}</h2>
-    <div class="mb-2 border-2 border-white hover:border-gray-200 cursor-pointer" (click)="collapse('airfrance')">
-        <p>Fullstack developper</p>
-        <p>Air France</p>
-        <div [ngClass]="{ 'block': map.get('airfrance'), 'hidden': !map.get('airfrance') }" class="mt-2">
-            <p>Some details</p>
-            <p>Some more details</p>
-            <p>Some extra details</p>
-            <p>Again some details</p>
-        </div>  
+    <div class="w-1/2 dev">
+        <div class="grid grid-cols-4 dev">
+            <h2 class="col-start-2 col-end-4 py-2 font-bold md:text-xl dev"><!-- text-base md:text-xl lg:text-2xl xl:text-2xl 2xl:text-3xl 3xl:text-4xl -->
+                {{ 'computer-skills' | translate | uppercase }}
+            </h2>
+            <button class="col-start-4 mr-auto dev" (click)="collapseToggleOne('skills')">
+                <img *ngIf="map.get('skills')"  [src]="arrowdown" alt="arrow down"/>
+                <img *ngIf="!map.get('skills')" [src]="arrowup" alt="arrow up"/>
+            </button>
+        </div>
+        <div [ngClass]="{ 'hidden': map.get('skills') }">
+            <div>Java</div>
+            <div>Spring</div>
+            <div>Spring Data Jpa</div>
+            <div>Html Css Js</div>
+            <div>Angular</div>  
+            <div>Sql-Server My-Sql</div>
+            <div>Azure Bitbucket Bamboo Sonarcloud</div>
+            <div>C C++ Qt</div>
+            <div>Uml</div>
+        </div>
     </div>
-    <div class="mb-2 border-2 border-white hover:border-gray-200 cursor-pointer" (click)="collapse('infotel')">
-        <p>Work placement fullstack developper</p>
-        <p>Infotel</p>
-        <div [ngClass]="{ 'block': map.get('infotel'), 'hidden': !map.get('infotel') }">
-            <p>Some details</p>
-            <p>Some more details</p>
-            <p>Some extra details</p>
-            <p>Again some details</p>
-        </div>  
+    <div class="w-1/2 dev">
+        <div class="grid grid-cols-4 dev">
+            <h2 class="col-start-2 col-end-4 py-2 font-bold md:text-xl dev">
+                {{ 'experiences' | translate | uppercase }}
+            </h2>
+            <button class="col-start-4 mr-auto dev" (click)="collapseToggleOne('experiences')">
+                <img *ngIf="map.get('experiences')"  [src]="arrowdown" alt="arrow down"/>
+                <img *ngIf="!map.get('experiences')" [src]="arrowup" alt="arrow up"/>
+            </button>
+        </div>
+        <div [ngClass]="{ 'hidden': map.get('experiences') }">
+            <div class="grid grid-cols-4 pb-1 dev" (click)="collapseToggleOne('af')">
+                <div class="col-start-2 col-end-4 hover:text-gray-400 cursor-pointer dev">
+                    {{ 'developer.fullstack' | translate | titlecase }} - Air France
+                </div>
+                <div class="col-start-2 col-end-4 mb-3 italic dev" [ngClass]="{ 'hidden': map.get('af') }">
+                    <div>Some details</div>
+                    <div>Some more details</div>
+                    <div>Some extra details</div>
+                    <div>Again some details</div>
+                </div>
+            </div>
+            <div class="grid grid-cols-4 pb-1 dev" (click)="collapseToggleOne('infotel')">
+                <div class="col-start-2 col-end-4 hover:text-gray-400 cursor-pointer dev">
+                    {{ 'internship' | translate | titlecase }} - Infotel
+                </div>
+                <div class="col-start-2 col-end-4 mb-3 italic dev" [ngClass]="{ 'hidden': map.get('infotel') }">
+                    <div>Some details</div>
+                    <div>Some more details</div>
+                    <div>Some extra details</div>
+                    <div>Again some details</div>
+                </div>
+            </div>
+            <div class="grid grid-cols-4 pb-1 dev" (click)="collapseToggleOne('gns')">
+                <div class="col-start-2 col-end-4 hover:text-gray-400 cursor-pointer dev">
+                    {{ 'internship' | translate | titlecase }} - Gnosys System
+                </div>
+                <div class="col-start-2 col-end-4 mb-3 italic dev" [ngClass]="{ 'hidden': map.get('gns') }">
+                    <div>Some details</div>
+                    <div>Some more details</div>
+                    <div>Some extra details</div>
+                    <div>Again some details</div>
+                </div>  
+            </div>
+        </div>
     </div>
-    <div class="mb-2 border-2 border-white hover:border-gray-200 cursor-pointer">
-        <p>Work placement fullstack developper</p>
-        <p></p> 
+    <div class="w-1/2 dev">
+        <div class="grid grid-cols-4 dev">
+            <h2 class="col-start-2 col-end-4 py-2 font-bold md:text-xl dev">
+                {{ 'training' | translate | uppercase }}
+            </h2>
+            <button class="col-start-4 mr-auto dev" (click)="collapseToggleOne('training')">
+                <img *ngIf="map.get('training')"  [src]="arrowdown" alt="arrow down"/>
+                <img *ngIf="!map.get('training')" [src]="arrowup" alt="arrow up"/>
+            </button>
+        </div>
+        <div [ngClass]="{ 'hidden': map.get('training') }">
+            <div class="grid grid-cols-4 pb-2 dev" (click)="collapseToggleOne('cda')">
+                <div class="col-start-1 col-end-5 hover:text-gray-400 cursor-pointer dev">
+                    {{ 'developer.conceptor' | translate | titlecase }} - Afpa
+                </div>
+                <div class="col-start-2 col-end-4 dev" [ngClass]="{ 'hidden': map.get('cda') }">
+                    <div>Some details</div>
+                    <div>Some more details</div>
+                    <div>Some extra details</div>
+                    <div>Again some details</div>
+                </div>  
+            </div>
+            <div class="grid grid-cols-4 pb-2 dev" (click)="collapseToggleOne('dwwm')">
+                <div class="col-start-2 col-end-4 hover:text-gray-400 cursor-pointer dev">
+                    {{ 'developer.web' | translate | titlecase }} - Afpa
+                </div>
+                <div class="col-start-2 col-end-4 dev" [ngClass]="{ 'hidden': map.get('dwwm') }">
+                    <div>Some details</div>
+                    <div>Some more details</div>
+                    <div>Some extra details</div>
+                    <div>Again some details</div>
+                </div>  
+            </div>
+        </div>
     </div>
-    <h2 class="font-bold text-base md:text-xl lg:text-2xl xl:text-2xl 2xl:text-3xl 3xl:text-4xl height-2rem mb-3">{{ 'training' | translate }}</h2>
-    <div class="mb-2 border-2 border-white hover:border-gray-200 cursor-pointer">
-        <p>Conception & developpement</p>
-        <p>Afpa Nice - France</p> 
+    <div class="w-1/2 dev">
+        <div class="grid grid-cols-4 dev">
+            <h2 class="col-start-2 col-end-4 py-2 font-bold md:text-xl dev">
+                {{ 'languages' | translate | uppercase }}
+            </h2>
+            <button class="col-start-4 mr-auto dev" (click)="collapseToggleOne('languages')">
+                <img *ngIf="map.get('languages')"  [src]="arrowdown" alt="arrow down"/>
+                <img *ngIf="!map.get('languages')" [src]="arrowup" alt="arrow up"/>
+            </button>
+        </div>
+        <div [ngClass]="{ 'hidden': map.get('languages') }">
+            <div>{{ 'english' | translate | titlecase }}</div>
+            <div>{{ 'spanish' | translate | titlecase }}</div>
+            <div>{{ 'french' | translate | titlecase }}</div>
+        </div>
     </div>
-    <div class="mb-2">
-        <p>Web developper and web mobile</p>
-        <p>Afpa Nice - France</p>  
-    </div>
-    <h2 class="font-bold text-base md:text-xl lg:text-2xl xl:text-2xl 2xl:text-3xl 3xl:text-4xl height-2rem mb-3">{{ 'languages' | translate }}</h2>
-    <div class="mb-1">
-        <p>French</p>
-        <p></p>
-    </div>
-    <div class="mb-1">
-        <p>English</p>
-        <p></p>  
-    </div>
-    <div class="mb-1">
-        <p>Spanish</p>
-        <p></p> 
-    </div>
-    <h2 class="font-bold text-base md:text-xl lg:text-2xl xl:text-2xl 2xl:text-3xl 3xl:text-4xl height-2rem mb-3">{{ 'leisures' | translate }}</h2>
-    <div class="mb-1">
-        <p>Coding</p>
-        <p>Electronic</p>
-        <p>Reading</p>
-        <p>Swimming</p>
-        <p>Cooking</p>
+    <div class="w-1/2 dev">
+        <div class="grid grid-cols-4 dev">
+            <h2 class="col-start-2 col-end-4 py-2 font-bold md:text-xl dev">
+                {{ 'leisures' | translate | uppercase }}
+            </h2>
+            <button class="col-start-4 mr-auto dev" (click)="collapseToggleOne('leisures')">
+                <img *ngIf="map.get('leisures')"  [src]="arrowdown" alt="arrow down"/>
+                <img *ngIf="!map.get('leisures')" [src]="arrowup" alt="arrow up"/>
+            </button>
+        </div>
+        <div [ngClass]="{ 'hidden': map.get('leisures') }">
+            <div>{{ 'coding' | translate | titlecase }}</div>
+            <div>{{ 'electronic' | translate | titlecase }}</div>
+            <div>{{ 'swimming' | translate | titlecase }}</div>
+        </div>
     </div>
 </div>

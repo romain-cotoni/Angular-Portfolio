@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { SharedRoutingModule } from './shared-routing.module';
 
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @NgModule({
@@ -12,7 +13,8 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
     SharedRoutingModule,
   ],
   exports: [
-    TranslateModule
+    TranslateModule,
+    MatSlideToggleModule
   ]
 })
 export class SharedModule { 

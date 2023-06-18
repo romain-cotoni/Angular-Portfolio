@@ -7,25 +7,33 @@ import { Component } from '@angular/core';
 })
 export class CvComponent {
 
-  showAll = false;
+  arrowup = "assets/icons/arrow-up.png";
+  arrowdown = "assets/icons/arrow-down.png"
+  collapsed = false;
 
   map = new Map<string, boolean>([
-    ['airfrance', false],
-    ['infotel', false],
-    ['gns', false],
-    ['afpa-cda', false],
-    ['afpa-dwwm', false],
-    ['anglais', false],
-    ['espagnol', false],
+    ['skills', false],
+    ['experiences', false],
+    ['af', true],
+    ['infotel', true],
+    ['gns', true],
+    ['training', false],
+    ['cda', true],
+    ['dwwm', true],
+    ['languages', false],
+    ['anglais', true],
+    ['espagnol', true],
+    ['leisures', false],
   ]);
 
-  collapse(value: string) {
+
+  collapseToggleOne(value: string) {
     this.map.set(value, !this.map.get(value));
   }
-
-  collapseAll() {
-    this.showAll = !this.showAll;
-    this.map.forEach((_,key) => { this.map.set(key, this.showAll) })
+  
+  collapseToggleAll() {
+    this.map.forEach( (_,key) => { this.map.set(key, this.collapsed) })
+    this.collapsed = !this.collapsed;
   }
 
 

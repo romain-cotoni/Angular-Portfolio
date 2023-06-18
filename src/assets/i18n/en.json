@@ -17,6 +17,19 @@
     "training":"Training",
     "languages":"Languages",
     "leisures":"Leisures",
+    
+    "developer.fullstack":"developer fullstack",
+    "developer.web":"developer web & mobile web",
+    "developer.conceptor":"conceptor developer applications",
+    "internship":"work placement",
+    
+    "french":"french",
+    "english":"english",
+    "spanish":"spanish",
+
+    "coding":"coding",
+    "electronic":"digital electronic",
+    "swimming":"swimming",
 
     "collapseAll":"Collapse All",
     "expandAll":"Expand All"

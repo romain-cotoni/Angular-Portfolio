@@ -18,6 +18,19 @@
     "languages":"Langues",
     "leisures":"Loisirs",
 
+    "developer.fullstack":"développeur fullstack",
+    "developer.web":"développeur web et web mobile",
+    "developer.conceptor":"concepteur développeur d'applications",
+    "internship":"stage",
+
+    "french":"français",
+    "english":"anglais",
+    "spanish":"espagnol",
+
+    "coding":"programmation",
+    "electronic":"électronique numérique",
+    "swimming":"natation",
+
     "collapseAll":"Tout Replier",
     "expandAll":"Tout Deplier"
 }
